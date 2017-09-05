@@ -14,7 +14,7 @@ NOTE: This utility works with `bash` only!
 Suppose it's cloned to `/sysenv`.
 The cloned directory should be readable by everyone.
 
-#### 2. Integrate sysenv into bash.
+#### 2. Integrate `sysenv` into bash.
 
 Just run
 ```
@@ -28,8 +28,8 @@ A line of `source /sysenv/env.bashrc` will be added to the proper file.
 
 
 *NOTE:*
-- *`/sysenv/env.bashrc` should be sourced no matter bash is interactive or not.*
-- *`/sysenv/env.bashrc` should be sourced even `bash` is started by SSH.*
+- *`/sysenv/env.bashrc` is sourced no matter bash is interactive or not.*
+- *`/sysenv/env.bashrc` is sourced even if `bash` is started by SSH.*
 - *Idempotence: to source `/sysenv/env.bashrc` many times is OK.*
 
 
@@ -37,7 +37,7 @@ A line of `source /sysenv/env.bashrc` will be added to the proper file.
 
 #### 1. Use `~/env.conf` to define environment variables.
 
-#### 2. Use `env-*xxx*` functions in `bash`.
+#### 2. Use `env-xxx` functions in `bash`.
 
 
 
