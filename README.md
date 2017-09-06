@@ -174,6 +174,7 @@ libhmsbeagle
 
 [.my_install_root]
 ~/build/${.my_compiled_libs}
+/usr/local/cuda-8.0
 
 [LIBRARY_PATH LD_LIBRARY_PATH]
 ${.my_install_root}/lib
