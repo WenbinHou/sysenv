@@ -1,5 +1,5 @@
 
-if [ $_ == $0 ]; then
+if [ "${BASH_SOURCE[0]}" == "$0" ]; then
     echo "[ERROR] sysenv: $(realpath "$0") must be sourced but not invoked"
     exit 1
 fi
