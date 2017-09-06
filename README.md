@@ -49,7 +49,7 @@ For example:
 - Back slashes `\`
 - Commas `:`
 - Asterisks `*`
-- Dollars (reserved for enviroment variables) `$`
+- Dollars (reserved for environment variables) `$`
 
 
 Whitespaces ` `, single quotes `'` and double quotes `"` should work.
