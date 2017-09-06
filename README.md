@@ -77,10 +77,9 @@ Use `env-mpi-select` to switch to a different MPI implementation.
 NOT every corner cases are tested. So please take care when using any **strange** characters in path string.
 
 For example:
-- Back slashes `\`
 - Colons `:`
 
-Dollars `$$`, Whitespaces ` `, single quotes `'` and double quotes `"` should work.
+Back slashes `\`, Dollars (escaped) `$$`, Whitespaces ` `, single quotes `'` and double quotes `"` should work.
 
 However, it's still strongly suggested **NOT** including these characters in path string,
 since not every program and library handles them very well.
