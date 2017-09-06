@@ -49,9 +49,9 @@ It's quite easy to define environment variables using `~/env.conf`
 
 *Please see `env.conf.example` for details.*
 
-### 2. Bash Command: env-reload
+### 2. Bash Command: `env-reload`
 
-````
+````bash
 env-reload
 ````
 After changing your `~/env.conf`, use this command to reload the file.
@@ -60,9 +60,9 @@ Quite a few corner cases are considered and tests, feel safe and free to use thi
 
 **The effect is real-time, which means you DO NOT need to exit & restart your `bash`**
 
-### 3. Bash Command: env-mpi-select
+### 3. Bash Command: `env-mpi-select`
 
-````
+````bash
 env-mpi-select              # This will show the information
 env-mpi-select <target>     # This will switch to the target implementation
 ````
