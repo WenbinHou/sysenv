@@ -29,10 +29,10 @@ A line of `source /sysenv/env.bashrc` will be added to the proper file.
 - For other OS: The installer can't do it for you. Manually add the above line into your system-wide bash profile.
 
 
-*NOTE:*
-- *`/sysenv/env.bashrc` is sourced no matter `bash` is interactive or not.*
-- *`/sysenv/env.bashrc` is sourced even if `bash` is started by SSH.*
-- *Idempotence: to source `/sysenv/env.bashrc` many times is OK.*
+NOTE:
+- `/sysenv/env.bashrc` is sourced no matter `bash` is interactive or not.
+- `/sysenv/env.bashrc` is sourced even if `bash` is started by SSH.
+- Idempotence: to source `/sysenv/env.bashrc` many times is OK.
 
 
 ## Usage
@@ -41,7 +41,7 @@ A line of `source /sysenv/env.bashrc` will be added to the proper file.
 
 It's quite easy to define environment variables using `~/env.conf`
 
-`env.conf` has a simple `ini`-style syntax:
+`env.conf` has a simple ini-style syntax:
 - Multiple values of an environment variable is defined in multiple lines, they will be joined with colon `:` at last
 - To reference environment variables (bash-style syntax: `$VAR` or `${VAR}`) when defining a environment variable is permitted
 - "Internal" variables (starting with dot `.`) will not be exported, but they bring convenience
@@ -49,7 +49,7 @@ It's quite easy to define environment variables using `~/env.conf`
 
 *Please see `env.conf.example` for details.*
 
-### 2. env-reload
+### 2. Bash Command: env-reload
 
 ````
 env-reload
@@ -60,7 +60,7 @@ Quite a few corner cases are considered and tests, feel safe and free to use thi
 
 **The effect is real-time, which means you DO NOT need to exit & restart your `bash`**
 
-### 3. env-mpi-select
+### 3. Bash Command: env-mpi-select
 
 ````
 env-mpi-select              # This will show the information
