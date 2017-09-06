@@ -41,26 +41,26 @@ A line of `source /sysenv/env.bashrc` will be added to the proper file.
 
 It's quite easy to define environment variables using `~/env.conf`
 
-`env.conf` has a quite simple `ini`-like syntax:
+`env.conf` has a simple `ini`-style syntax:
 - Multiple values of an environment variable is defined in multiple lines, they will be joined with colon `:` at last
-- To reference environment variables when defining a environment variable is permitted
-- "Internal" variables (starting with dot `.`) will not be exported, but they bring convenience.
+- To reference environment variables (bash-style syntax: `$VAR` or `${VAR}`) when defining a environment variable is permitted
+- "Internal" variables (starting with dot `.`) will not be exported, but they bring convenience
 - Using special characters in environment variables is OK
 
 *Please see `env.conf.example` for details.*
 
-### 2. Use `env-xxx` functions in `bash`.
-#### env-reload
+### 2. env-reload
 
 ````
 env-reload
 ````
 After changing your `~/env.conf`, use this command to reload the file.
+
 Quite a few corner cases are considered and tests, feel safe and free to use this command!
 
 **The effect is real-time, which means you DO NOT need to exit & restart your `bash`**
 
-#### env-mpi-select
+### 3. env-mpi-select
 
 ````
 env-mpi-select              # This will show the information
