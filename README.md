@@ -87,10 +87,15 @@ since not every program and library handles them very well.
 
 ## Similar Tools
 
+I found there are some similar tools, but they are not light-weight enough.
 
+#### SoftEnv
+See http://www.mcs.anl.gov/hs/software/systems/softenv/softenv-intro.html
 
+#### Environment Modules 
+See http://modules.sourceforge.net/
 
-## env.conf.example
+## Example `~/env.conf`
 
 ````ini
 
