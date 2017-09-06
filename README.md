@@ -133,10 +133,10 @@ ${FOO}233
 # single quotes, double quotes, whitespaces, bask-slashes...
 #
 # In the following example, MY_VAR =
-#   M\y$V:a "lu'e
+#   M\y$V:a "lu'e"
 ###############################################################################
 [MY_VAR]
-M\y$$V:a "lu'e
+M\y$$V:a "lu'e"
 
 
 ###############################################################################
