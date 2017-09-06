@@ -199,7 +199,7 @@ def env_reload():
     if os.path.isfile(g_OutMetaPath):
         with codecs.open(g_OutMetaPath, 'r', 'utf-8') as metafile:
             org_dict = json.load(metafile)
-        print(org_dict)
+        # print(org_dict)
         for env_name in org_dict:
             if env_name not in curr_env:
                 continue
@@ -247,7 +247,7 @@ def env_reload():
             outfile.write('export %s="%s"\n' % (env_name, outline))
 
         for env_name in unset_env:
-            outfile.write('unset %s"\n' % env_name)
+            outfile.write('unset "%s"\n' % env_name)
 
 
 def env_mpi_select():
