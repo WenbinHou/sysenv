@@ -227,14 +227,6 @@ def env_reload():
     env_dict = {}
     expand_env_var(env_ddict_raw, env_dict)
 
-    print()
-    print()
-    print(curr_env)
-    print()
-    print(unset_env)
-    print()
-    print()
-
     # Print the result to meta
     with codecs.open(g_OutMetaPath, 'w', 'utf-8') as metafile:
         json.dump(env_dict, metafile)
