@@ -23,7 +23,7 @@ env-reload() {
         #cat "$SYSENV_OUTPUT_DIRECTORY/bashrc"
         source "$SYSENV_OUTPUT_DIRECTORY/bashrc"
     fi
-    rm "$SYSENV_OUTPUT_DIRECTORY/bashrc"
+    rm -f "$SYSENV_OUTPUT_DIRECTORY/bashrc"
 }
 
 #env-mpi-select() {

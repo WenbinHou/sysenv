@@ -238,8 +238,8 @@ def read_conf_file():
                     raise ValueError("The environment name '%s' is invalid" % line)
             else:
                 # Check that only legal characters are in this line
-                if '\\' in line:
-                    raise ValueError("The following line contains invalid character(s): %s" % line)
+                #if '\\' in line:
+                #    raise ValueError("The following line contains invalid character(s): %s" % line)
 
                 # Replace head '~' with $HOME
                 if line[0] == '~':
@@ -273,7 +273,7 @@ def env_reload():
                 outline = string.join(new_conf[env_name] + [curr_env[env_name]], ':')
             else:
                 outline = string.join(new_conf[env_name], ':')
-            outline = outline.replace('"', '\\"').replace('$', '\\$')
+            outline = outline.replace("\\", "\\\\").replace('"', '\\"').replace('$', '\\$')
             outfile.write('export %s="%s"\n' % (env_name, outline))
 
         for env_name in unset_vars:
@@ -287,7 +287,7 @@ def env_reload():
             if curr_env[env_name] == os.environ[env_name]:
                 continue
             outline = curr_env[env_name]
-            outline = outline.replace('"', '\\"').replace('$', '\\$')
+            outline = outline.replace("\\", "\\\\").replace('"', '\\"').replace('$', '\\$')
             outfile.write('export %s="%s"\n' % (env_name, outline))
 
 
