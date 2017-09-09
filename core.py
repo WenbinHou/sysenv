@@ -233,7 +233,7 @@ def read_conf_file():
                 continue
 
             if line[0] == '[' and line[-1] == ']':  # Now starting a new section
-                current_lists = map(lambda name: result[name], patten.findall(line[1:-1]))
+                current_lists = list(map(lambda name: result[name], patten.findall(line[1:-1])))
                 if len(current_lists) == 0:
                     raise ValueError("The environment name '%s' is invalid" % line)
             else:
@@ -270,9 +270,9 @@ def env_reload():
                 unset_vars.remove(env_name)
 
             if env_name in curr_env:
-                outline = string.join(new_conf[env_name] + [curr_env[env_name]], ':')
+                outline = ":".join(new_conf[env_name] + [curr_env[env_name]])
             else:
-                outline = string.join(new_conf[env_name], ':')
+                outline = ":".join(new_conf[env_name])
             outline = outline.replace("\\", "\\\\").replace('"', '\\"').replace('$', '\\$')
             outfile.write('export %s="%s"\n' % (env_name, outline))
 
