@@ -1,0 +1,13 @@
+
+#
+# It's the same as 
+#
+#   source "/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpivars.sh" release_mt
+#
+# If you are sure there are no multiple threads calling MPI at the same time, use
+#
+#   source "/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpivars.sh" release
+#
+
+source "/opt/intel/compilers_and_libraries/linux/mpi/intel64/bin/mpivars.sh"
+
