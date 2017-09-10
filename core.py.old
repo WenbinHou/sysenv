@@ -238,7 +238,7 @@ def read_conf_file():
                     raise ValueError("The environment name '%s' is invalid" % line)
             else:
                 # Check that only legal characters are in this line
-                #if '\\' in line:
+                # if '\\' in line:
                 #    raise ValueError("The following line contains invalid character(s): %s" % line)
 
                 # Replace head '~' with $HOME
